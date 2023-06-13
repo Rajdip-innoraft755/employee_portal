@@ -1,0 +1,30 @@
+uuid: 01057d2d-0178-4e7e-84a5-18b98cc6b0d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.blogs
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap5
+id: views_block__blogs_block_2
+theme: bootstrap5
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:blogs-block_2'
+settings:
+  id: 'views_block:blogs-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/employees/*'

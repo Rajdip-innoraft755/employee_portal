@@ -1,0 +1,27 @@
+uuid: b395c692-d677-487f-bcee-3635d029b5c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.blog_comments
+    - field.field.comment.blog_comments.comment_body
+    - field.field.comment.blog_comments.field_your_email_id
+    - field.field.comment.blog_comments.field_your_name
+  module:
+    - text
+id: comment.blog_comments.default
+targetEntityType: comment
+bundle: blog_comments
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_your_email_id: true
+  field_your_name: true
+  links: true

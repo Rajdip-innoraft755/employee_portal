@@ -1,0 +1,8 @@
+uuid: c977761b-ea4f-45eb-8ab6-e02cfb8529b9
+langcode: en
+status: true
+dependencies: {  }
+name: Skills
+vid: skills
+description: 'Categorise employees on the basis of their skills '
+weight: 0

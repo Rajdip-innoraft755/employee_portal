@@ -1,0 +1,182 @@
+uuid: 3afeee14-b1e8-4b03-8074-6a381bc6c8c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.employee.field_age
+    - field.field.node.employee.field_designation
+    - field.field.node.employee.field_goal
+    - field.field.node.employee.field_key_characteristics
+    - field.field.node.employee.field_name
+    - field.field.node.employee.field_profile_picture
+    - field.field.node.employee.field_salary
+    - field.field.node.employee.field_skills
+    - image.style.medium
+    - node.type.employee
+  module:
+    - age_field_formatter
+    - field_group
+    - image
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  field_group:
+    group_background:
+      children:
+        - field_name
+        - field_age
+        - field_salary
+      label: Background
+      parent_name: ''
+      region: content
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: false
+        formatter: closed
+        direction: vertical
+        width_breakpoint: 640
+        effect: none
+        weight: 0
+        element: div
+        show_label: '0'
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        speed: fast
+    group_skills:
+      children:
+        - field_skills
+      label: Skills
+      parent_name: ''
+      region: content
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: false
+    group_key_characteristics:
+      children:
+        - field_key_characteristics
+      label: 'Key Characteristics'
+      parent_name: ''
+      region: content
+      weight: 5
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: false
+    group_goals:
+      children:
+        - field_goal
+      label: Goals
+      parent_name: ''
+      region: content
+      weight: 6
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: false
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.employee.default
+targetEntityType: node
+bundle: employee
+mode: default
+content:
+  field_age:
+    type: age_field_formatter
+    label: inline
+    settings:
+      age_format: age_only
+      year_suffix: '1'
+      date_format: 'Y-m-d\TH:i:s'
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_designation:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_goal:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_key_characteristics:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_name:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_profile_picture:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_salary:
+    type: number_decimal
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_skills:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  layout_builder__layout: true
