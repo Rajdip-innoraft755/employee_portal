@@ -1,0 +1,24 @@
+uuid: 64e7d25c-46ec-4ad7-9c15-3e1d6d0245bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_age
+    - node.type.employee
+  module:
+    - datetime
+id: node.employee.field_age
+field_name: field_age
+entity_type: node
+bundle: employee
+label: Age
+description: 'Select the date of birth'
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

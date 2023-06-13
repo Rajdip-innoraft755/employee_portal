@@ -1,0 +1,48 @@
+uuid: 5294ecb6-1e2c-452b-a1bb-24f61a602c6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.project.field_assigned_employees
+    - field.field.node.project.field_customer_name
+    - field.field.node.project.field_start_date
+    - node.type.project
+  module:
+    - datetime
+    - user
+id: node.project.default
+targetEntityType: node
+bundle: project
+mode: default
+content:
+  field_assigned_employees:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_customer_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_start_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

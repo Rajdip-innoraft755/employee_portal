@@ -1,0 +1,29 @@
+uuid: 928d0ebc-4826-4eed-a0b1-01aa3245122d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_designation
+    - node.type.employee
+    - taxonomy.vocabulary.designation
+id: node.employee.field_designation
+field_name: field_designation
+entity_type: node
+bundle: employee
+label: Designation
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      designation: designation
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

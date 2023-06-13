@@ -1,0 +1,8 @@
+uuid: c4c7ef55-1888-4bfe-8634-ee684e85cc0d
+langcode: en
+status: true
+dependencies: {  }
+id: easy-navigation
+label: 'Easy Navigation'
+description: ''
+locked: false

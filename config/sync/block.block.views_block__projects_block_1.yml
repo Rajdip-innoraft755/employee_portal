@@ -1,0 +1,29 @@
+uuid: 03ad48bd-4cd6-4a8e-9af9-1022640d6ca7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.projects
+  module:
+    - system
+    - views
+  theme:
+    - bootstrap5
+id: views_block__projects_block_1
+theme: bootstrap5
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:projects-block_1'
+settings:
+  id: 'views_block:projects-block_1'
+  label: 'Recent Projects'
+  label_display: visible
+  provider: views
+  views_label: 'Recent Projects'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node
